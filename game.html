@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickman Hangman Game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Game Screen -->
+    <div id="game-screen">
+        <div class="game-chalkboard">
+            <div id="hangman-container">
+                <!-- Gallows as image -->
+                <img id="hangman-gallows" src="/hanging-stick.png" alt="Gallows" width="200" height="200">
+                
+                <!-- Hangman parts as images -->
+                <img id="head" class="hangman-part" src="/hangman-parts/head.png" style="top: 15x; left: 50%; transform: translateX(-50%); width: 40px; height: 40px;">
+                <img id="body" class="hangman-part" src="/hangman-parts/body.png" style="top: 50px; left: 50%; transform: translateX(-50%); width: 30px; height: 80px;">
+                <img id="left-arm" class="hangman-part" src="/hangman-parts/left-hand.png" style="top: 70px; left: 40%; transform: translateX(-50%); width: 40px; height: 40px;">
+                <img id="right-arm" class="hangman-part" src="/hangman-parts/right-hand.png" style="top: 70px; right: 40%; transform: translateX(50%); width: 40px; height: 40px;">
+                <img id="left-leg" class="hangman-part" src="/hangman-parts/left-leg.png" style="top: 120px; left: 45%; transform: translateX(-50%); width: 30px; height: 50px;">
+                <img id="right-leg" class="hangman-part" src="/hangman-parts/right-leg.png" style="top: 120px; right: 45%; transform: translateX(50%); width: 30px; height: 50px;">
+            </div>
+            
+            <div id="word-display"></div>
+            
+            <div id="alphabet-buttons"></div>
+            
+            <div id="game-info">
+                <div>Wrong guesses: <span id="wrong-count">0</span>/6</div>
+                <div id="wrong-letters"></div>
+            </div>
+            
+            <div id="game-message"></div>
+            
+            <div id="game-controls">
+                <button id="restart-button">Play Again</button>
+                <button id="home-button">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/game.js"></script>
+</body>
+</html>
